@@ -33,3 +33,39 @@
         }
     }
 }
+@media (min-width: $breakpoint-desktop){
+    .navbar{
+        max-width: 1240px;
+        margin: 0 auto;
+        .logo{
+            padding: 0.5em 1em;
+        }
+        .mainmenu{
+            position: relative;
+            height: auto;
+            width: auto;
+            top: auto;
+            bottom: auto;
+            flex-grow: 1;
+            justify-content: flex-end;
+            &__item{
+                a{
+                    position: relative;
+                    display: block;
+                    &:hover{
+                        color: $color-rojo;
+                    }
+                }
+            }
+        }
+        .togglemenu{
+            position: relative;
+            padding: 1em;
+            font-size: 1.6em;
+            right: 0;
+            &:hover{
+                color: $color-rojo;
+            }
+        }
+    }
+}

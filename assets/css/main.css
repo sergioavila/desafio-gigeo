@@ -1374,6 +1374,40 @@ table {
   font-size: 1.6em;
 }
 
+@media (min-width: 992px) {
+  .navbar {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .navbar .logo {
+    padding: 0.5em 1em;
+  }
+  .navbar .mainmenu {
+    position: relative;
+    height: auto;
+    width: auto;
+    top: auto;
+    bottom: auto;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  .navbar .mainmenu__item a {
+    position: relative;
+    display: block;
+  }
+  .navbar .mainmenu__item a:hover {
+    color: #EF6461;
+  }
+  .navbar .togglemenu {
+    position: relative;
+    padding: 1em;
+    font-size: 1.6em;
+    right: 0;
+  }
+  .navbar .togglemenu:hover {
+    color: #EF6461;
+  }
+}
 .header .mainbanner {
   width: 100%;
   height: 10vh;
@@ -1410,6 +1444,11 @@ table {
   display: none;
 }
 
+@media (min-width: 992px) {
+  .header {
+    border-bottom: 1px solid #666;
+  }
+}
 .user__profile img {
   max-width: 100%;
 }
@@ -1439,6 +1478,50 @@ table {
 .video__item p {
   color: #666;
   font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 992px) {
+  .header .user {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header .user .actions {
+    display: flex;
+    align-items: center;
+  }
+  .header .user .actions__buttons {
+    display: flex;
+  }
+  .header .user .actions__buttons .button {
+    margin-left: 1em;
+  }
+
+  .video {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .video h2 {
+    text-align: left;
+  }
+  .video__item {
+    padding: 0 1em;
+  }
+}
+.button {
+  display: block;
+  padding: 0.7em 1em;
+  background-color: #92DCE5;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: #fff;
+}
+.button:hover {
+  background-color: #666;
+}
+.button--secondary {
+  background-color: #EF6461;
 }
 
 /*# sourceMappingURL=main.css.map */

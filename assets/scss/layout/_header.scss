@@ -37,3 +37,8 @@
         }
     }
 }
+@media (min-width: $breakpoint-desktop){
+    .header{
+        border-bottom: 1px solid $color-gris;
+    }
+}
