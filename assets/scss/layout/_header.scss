@@ -40,5 +40,8 @@
 @media (min-width: $breakpoint-desktop){
     .header{
         border-bottom: 1px solid $color-gris;
+        .mainbanner{
+            height: 40vh;
+        }
     }
 }

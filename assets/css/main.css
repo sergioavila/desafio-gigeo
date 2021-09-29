@@ -1357,21 +1357,33 @@ table {
   font-size: 2.5em;
   color: #666;
 }
+.navbar input {
+  display: none;
+}
+.navbar input[type=checkbox]:checked ~ .mainmenu {
+  height: 5em;
+}
 .navbar .mainmenu {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  bottom: -2.9em;
+  top: 7em;
   height: 3em;
   width: 100%;
   background-color: #fff;
   height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s;
 }
 .navbar .mainmenu__item a {
   color: #000;
   text-decoration: none;
   padding: 1em;
   font-size: 1.6em;
+  display: block;
+}
+.navbar .mainmenu__item--toggler {
+  display: none;
 }
 
 @media (min-width: 992px) {
@@ -1388,7 +1400,7 @@ table {
     width: auto;
     top: auto;
     bottom: auto;
-    flex-grow: 1;
+    align-items: center;
     justify-content: flex-end;
   }
   .navbar .mainmenu__item a {
@@ -1398,14 +1410,11 @@ table {
   .navbar .mainmenu__item a:hover {
     color: #EF6461;
   }
-  .navbar .togglemenu {
-    position: relative;
-    padding: 1em;
-    font-size: 1.6em;
-    right: 0;
+  .navbar .mainmenu__item--toggler {
+    display: block;
   }
-  .navbar .togglemenu:hover {
-    color: #EF6461;
+  .navbar .togglemenu {
+    display: none;
   }
 }
 .header .mainbanner {
@@ -1447,6 +1456,9 @@ table {
 @media (min-width: 992px) {
   .header {
     border-bottom: 1px solid #666;
+  }
+  .header .mainbanner {
+    height: 40vh;
   }
 }
 .user__profile img {

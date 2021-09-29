@@ -14,21 +14,33 @@
         font-size: 2.5em;
         color: $color-gris;
     }
+    input{
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .mainmenu {
+        height: 5em;
+    }
     .mainmenu{
         position: absolute;
         display: flex;
         justify-content: space-between;
-        bottom: -2.9em;
+        top: 7em;
         height: 3em;
         width: 100%;
         background-color: $color-blanco;
         height: 0;
+        overflow-y: hidden;
+        transition: all .4s;
         &__item{
             a{
                 color: $color-negro;
                 text-decoration: none;
                 padding: 1em;
                 font-size: 1.6em;
+                display: block;
+            }
+            &--toggler{
+                display: none;
             }
         }
     }
@@ -46,7 +58,7 @@
             width: auto;
             top: auto;
             bottom: auto;
-            flex-grow: 1;
+            align-items: center;
             justify-content: flex-end;
             &__item{
                 a{
@@ -56,16 +68,13 @@
                         color: $color-rojo;
                     }
                 }
+                &--toggler{
+                    display: block;
+                }
             }
         }
         .togglemenu{
-            position: relative;
-            padding: 1em;
-            font-size: 1.6em;
-            right: 0;
-            &:hover{
-                color: $color-rojo;
-            }
+            display: none;
         }
     }
 }
